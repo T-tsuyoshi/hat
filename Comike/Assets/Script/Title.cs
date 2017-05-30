@@ -5,15 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class Title : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    public GameObject Obj;
+
+    // Use this for initialization
+    void Start () {
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-        if (Input.GetKey(KeyCode.Space)){
+        Cursor cursor = Obj.GetComponent<Cursor>();
+        if (Input.GetKey(KeyCode.Space) &&
+            cursor.ReturnCursorY() == -1){
             SceneManager.LoadScene("Game");
         }
 		
