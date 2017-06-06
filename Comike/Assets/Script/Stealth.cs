@@ -12,7 +12,7 @@ public class Stealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //キーが押された
-		if(Input.GetKey(KeyCode.B) == true)
+		if(Input.GetKey(KeyCode.B) == true && Input.GetKey(KeyCode.DownArrow) == true)
         {
             //isTriggerをtrueにしてすり抜けられるようにする
             this.GetComponent<BoxCollider2D>().isTrigger = true;
