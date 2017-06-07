@@ -74,7 +74,7 @@ public class Player : MonoBehaviour {
                 if (isGrounded)
                 {
                     //上方向に力を加える
-                    rigidbody2d.AddForce(Vector2.up * 250);
+                    rigidbody2d.AddForce(Vector2.up * 450);
                 }
             }
 
