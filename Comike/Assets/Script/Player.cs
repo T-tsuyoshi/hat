@@ -39,7 +39,7 @@ public class Player : MonoBehaviour {
             //地面に接しているかを算出
             isGrounded = Physics2D.Raycast(
                 transform.position, Vector2.down,
-                0.6f, 1 << LayerMask.NameToLayer("Ground"));
+                1.0f, 1 << LayerMask.NameToLayer("Ground"));
 
             //右キーが押された
             if (Input.GetKey(KeyCode.RightArrow))
@@ -74,7 +74,7 @@ public class Player : MonoBehaviour {
                 if (isGrounded)
                 {
                     //上方向に力を加える
-                    rigidbody2d.AddForce(Vector2.up * 250);
+                    rigidbody2d.AddForce(Vector2.up * 500);
                 }
             }
 
